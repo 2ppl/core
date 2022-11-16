@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/2ppl/core/compare/v1.0.0...v1.0.1) (2022-11-16)
+
+
+### Bug Fixes
+
+* add examples export ([cd798db](https://github.com/2ppl/core/commit/cd798db8f7a3ece01ef25fce520611c7f3860f68))
+
 # 1.0.0 (2022-11-16)
 
 
