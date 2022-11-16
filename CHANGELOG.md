@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/2ppl/core/compare/v1.0.1...v1.0.2) (2022-11-16)
+
+
+### Bug Fixes
+
+* remake exports ([b17650f](https://github.com/2ppl/core/commit/b17650f3b4891f4348a359cc8057fa8c3ef47b62))
+
 ## [1.0.1](https://github.com/2ppl/core/compare/v1.0.0...v1.0.1) (2022-11-16)
 
 
