@@ -30,6 +30,11 @@
       "types": "./dist/di/index.d.ts",
       "node": "./dist/di/index.js",
       "require": "./dist/di/index.js"
+    },
+    "./examples": {
+      "types": "./dist/examples/index.d.ts",
+      "node": "./dist/examples/index.js",
+      "require": "./dist/examples/index.js"
     }
   },
   "files": [
