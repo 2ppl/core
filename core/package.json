@@ -1,0 +1,6 @@
+{
+  "name": "@2ppl/core/core",
+  "types": "../dist/core/index.d.ts",
+  "main": "../dist/core/index.js",
+  "sideEffects": false
+}
