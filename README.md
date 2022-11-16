@@ -1,1 +1,1 @@
-# core
+# @2ppl/core

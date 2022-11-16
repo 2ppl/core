@@ -1,0 +1,26 @@
+{
+  "name": "@2ppl/core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2ppl/core.git"
+  },
+  "author": "smithjke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/2ppl/core/issues"
+  },
+  "homepage": "https://github.com/2ppl/core#readme",
+  "devDependencies": {
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.25.8",
+    "axios": "^1.1.3"
+  }
+}
