@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/2ppl/core/compare/v1.0.2...v1.1.0) (2022-12-12)
+
+
+### Features
+
+* refactor crud\n\nBREAKING CHANGE: remove F and OF generics ([13621e5](https://github.com/2ppl/core/commit/13621e57c93ee2ab03a8099f3d4730ae111cf380))
+
 ## [1.0.2](https://github.com/2ppl/core/compare/v1.0.1...v1.0.2) (2022-11-16)
 
 
