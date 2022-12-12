@@ -14,7 +14,7 @@ export interface CrudService<T extends BaseCrudType> {
 
   findOne: (params: T['entityKey']) => Promise<T['singleEntity']>;
 
-  findAll: (query?: CrudFindAllQuery<T>) => Promise<CrudFindAllResult<T>>;
+  findAll: (query?: CrudFindAllQuery) => Promise<CrudFindAllResult<T['listedEntity']>>;
 }
 
 export type BaseCrudService = CrudService<BaseCrudType>;

@@ -1,24 +1,16 @@
 import { ApiConfig } from '../../../api';
 import { CrudAxiosService, CrudService } from '../../../crud';
-import {
-  CreateEntity,
-  EntityCrudType,
-  EntityKey,
-  UpdateEntity,
-  listedEntity,
-  singleEntity,
-  SingleEntity,
-} from './entity';
+import { EntityCrudType, listedEntity, singleEntity } from './entity';
 
 export interface EntityService extends CrudService<EntityCrudType> {
   superUpdate: (
-    data: UpdateEntity,
-    params: EntityKey,
-  ) => Promise<SingleEntity>;
+    data: EntityCrudType['updateEntity'],
+    params: EntityCrudType['entityKey'],
+  ) => Promise<EntityCrudType['singleEntity']>;
 
   superCreate: (
-    data: CreateEntity,
-  ) => Promise<SingleEntity>;
+    data: EntityCrudType['createEntity'],
+  ) => Promise<EntityCrudType['singleEntity']>;
 }
 
 export const entityApiConfig: ApiConfig<EntityService, CrudService<EntityCrudType>> = {
@@ -37,7 +29,10 @@ export class EntityCrudAxiosService extends CrudAxiosService<EntityCrudType> imp
 
   protected listedEntity = listedEntity;
 
-  async superUpdate(data: UpdateEntity, params: EntityKey): Promise<SingleEntity> {
+  async superUpdate(
+    data: EntityCrudType['updateEntity'],
+    params: EntityCrudType['entityKey'],
+  ): Promise<EntityCrudType['singleEntity']> {
     return this.request({
       ...entityApiConfig.superUpdate,
       params,
@@ -45,7 +40,7 @@ export class EntityCrudAxiosService extends CrudAxiosService<EntityCrudType> imp
     }, this.validateSingleEntity);
   }
 
-  async superCreate(data: CreateEntity): Promise<SingleEntity> {
+  async superCreate(data: EntityCrudType['createEntity']): Promise<EntityCrudType['singleEntity']> {
     return this.request({
       ...entityApiConfig.superCreate,
       data,

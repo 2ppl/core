@@ -87,8 +87,8 @@ export abstract class CrudAxiosService<T extends BaseCrudType> extends AxiosServ
     }, this.validateSingleEntity);
   }
 
-  async findAll(query?: CrudFindAllQuery<T>): Promise<CrudFindAllResult<T>> {
-    return this.request<CrudFindAllResult<T>>({
+  async findAll(query?: CrudFindAllQuery): Promise<CrudFindAllResult<T['listedEntity']>> {
+    return this.request<CrudFindAllResult<T['listedEntity']>>({
       ...crudApiConfig.findAll,
       query,
     }, this.validateListedEntity);

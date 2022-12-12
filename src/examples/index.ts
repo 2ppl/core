@@ -1,7 +1,2 @@
-import * as Api from './api';
-import * as Schema from './schema';
-
-export {
-  Api,
-  Schema,
-};
+export * as Api from './api';
+export * as Schema from './schema';

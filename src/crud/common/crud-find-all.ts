@@ -1,35 +1,32 @@
-import { TSchema, Type } from '@sinclair/typebox';
-import { BaseCrudType } from './crud';
+import { Static, TSchema, Type } from '@sinclair/typebox';
 
-export type CrudFindAllQuery<T extends BaseCrudType> = {
-  limit?: number;
-  offset?: number;
-  order?: {
-    field: T['entityOrderField'];
-    direction: 'asc' | 'desc';
-  };
-  filter?: T['entityFilter'];
-};
-
-export function makeCrudFindAllQuery<OF extends TSchema, F extends TSchema>(field: OF, filter: F) {
-  return Type.Partial(
-    Type.Object({
-      limit: Type.Integer({ minimum: 0 }),
-      offset: Type.Integer({ minimum: 0 }),
-      order: Type.Object({
-        field,
-        direction: Type.Union([
-          Type.Literal('asc'),
-          Type.Literal('desc'),
-        ])
-      }),
-      filter,
+export const crudFindAllQuery = Type.Partial(
+  Type.Object({
+    limit: Type.Integer({ minimum: 0, maximum: 100 }),
+    offset: Type.Integer({ minimum: 0 }),
+    order: Type.Object({
+      field: Type.String(),
+      direction: Type.Union([
+        Type.Literal('asc'),
+        Type.Literal('desc'),
+      ])
     }),
-  );
-}
+    filter: Type.Record(Type.String(), Type.Union([
+      Type.String(),
+      Type.Object({ equal: Type.String() }),
+      Type.Object({ like: Type.String() }),
+      Type.Object({ gte: Type.String() }),
+      Type.Object({ lte: Type.String() }),
+      Type.Object({ gt: Type.String() }),
+      Type.Object({ lt: Type.String() }),
+    ])),
+  }),
+);
 
-export type CrudFindAllResult<T extends BaseCrudType> = {
-  list: Array<T['listedEntity']>;
+export type CrudFindAllQuery = Static<typeof crudFindAllQuery>;
+
+export type CrudFindAllResult<T extends object> = {
+  list: Array<T>;
   total: number;
 };
 
