@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/2ppl/core/compare/v1.1.0...v1.1.1) (2023-02-20)
+
+
+### Bug Fixes
+
+* update README ([45c8e5b](https://github.com/2ppl/core/commit/45c8e5b046e8fc308c9dafef07b0d6218604933d))
+
 # [1.1.0](https://github.com/2ppl/core/compare/v1.0.2...v1.1.0) (2022-12-12)
 
 
