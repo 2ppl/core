@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/2ppl/core/compare/v1.1.1...v1.1.2) (2023-02-22)
+
+
+### Bug Fixes
+
+* add GUIDE.md ([efb7fca](https://github.com/2ppl/core/commit/efb7fcafad2db7e859a21d939a4ade8c0c80e821))
+
 ## [1.1.1](https://github.com/2ppl/core/compare/v1.1.0...v1.1.1) (2023-02-20)
 
 
